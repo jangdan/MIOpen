@@ -38,6 +38,7 @@
 #include <miopen/reduce/solvers.hpp>
 #include <miopen/mha/solvers.hpp>
 #include <miopen/softmax/solvers.hpp>
+#include <miopen/maskedfill/solvers.hpp>
 
 #include <miopen/conv_algo_name.hpp>
 #include <miopen/db.hpp>
@@ -672,6 +673,7 @@ inline SolverRegistrar::SolverRegistrar(IdRegistryData& registry)
              Primitive::Fusion,
              fusion::ConvWinoFuryRxSFused<2, 3>{}.SolverDbId(),
              miopenConvolutionAlgoWinograd);
+    Register(registry, ++id, Primitive :: MaskedFill, maskedfill :: MaskedFill {}.SolverDbId());
 
     // IMPORTANT: New solvers should be added to the end of the function!
 }
