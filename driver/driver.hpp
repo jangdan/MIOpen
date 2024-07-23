@@ -177,7 +177,7 @@ inline void PadBufferSize(size_t& sz, int datatype_sz)
            "adamw[fp16], ampadamw, transformersadamw[fp16], transformersampadamw, "
            "getitem[bfp16|fp16]\n");
            "t5layernorm[bfp16|fp16], adam[fp16], ampadam, reduceextreme[bfp16|fp16]"
-           ", maskedfill"
+           ", maskedfill[fp16|bfp16]"
            "\n");
     exit(0); // NOLINT (concurrency-mt-unsafe)
 }
@@ -218,7 +218,7 @@ inline std::string ParseBaseArg(int argc, char* argv[])
        arg != "t5layernorm" && arg != "t5layernormfp16" && arg != "t5layernormbfp16" &&
        arg != "adam" && arg != "adamfp16" && arg != "ampadam" && arg != "reduceextreme" &&
        arg != "reduceextremefp16" && arg != "reduceextremebfp16" &&
-       arg != "maskedfill" &&
+       arg != "maskedfill" && arg != "maskedfillfp16" && arg != "maskedfillbfp16" &&
        arg != "--version")
     {
         printf("FAILED: Invalid Base Input Argument\n");
