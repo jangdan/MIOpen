@@ -70,6 +70,7 @@
  * @defgroup cat
  * @defgroup SGD
  * @defgroup getitem
+ * @defgroup MaskedFill
  *
  */
 
@@ -7608,7 +7609,7 @@ MIOPEN_EXPORT miopenStatus_t miopenGetitemBackward(miopenHandle_t handle,
 #endif // MIOPEN_BETA_API
 # ifdef MIOPEN_BETA_API
 
-/** @addtogroup maskedfill
+/** @addtogroup MaskedFill
  *  @{
  */
 

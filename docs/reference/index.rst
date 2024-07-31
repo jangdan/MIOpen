@@ -35,3 +35,4 @@ The MIOpen API library is structured as follows:
   * :doc:`ReduceExtreme <../doxygen/html/group__ReduceExtreme>` (experimental)
   * :doc:`Getitem <../doxygen/html/group__getitem>` (experimental)
   * :doc:`MaskedFill <../doxygen/html/group__maskedfill>` (experimental)
+  * :doc:`MaskedFill <../doxygen/html/group___masked_fill>` (experimental)
